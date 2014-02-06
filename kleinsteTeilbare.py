@@ -21,7 +21,7 @@ def kleinsteTeilbare(zahl):
     temp=2.0
     while teilbar(temp,zahl)!=1:
         temp+=1
-        #print temp
+        print temp
     return int(temp)
 
 

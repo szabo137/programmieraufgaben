@@ -17,21 +17,19 @@ def freitag(date1,date2):
         print "Das spaete Datum ist vor dem fruehen!"
     
     for i in range(delta):
-        if tempDay.day!=13 or tempDay.weekday()!=4:
-            tempDay=tempDay + d.timedelta(days=1)
-        else:
-            temp.append(tempDay.isoformat())
-    
+        if tempDay.day==13 and tempDay.weekday()==4:
+            temp.append(tempDay.isoformat())            
+        tempDay=tempDay + d.timedelta(days=1)
     return temp
 
-erstesDatum=d.date(2000,1,1) 
+erstesDatum=d.date(2000,11,1) 
 zweitesDatum=d.date(2000,12,31)
 
 
 
 
 if freitag(erstesDatum , zweitesDatum) == []:
-    print "Es liegen keine schwarzen Freitage zwischen " + erstesDatum.isoformat() + "und" +  zweitesDatum.isoformat()
+    print "Es liegen keine schwarzen Freitage zwischen " + erstesDatum.isoformat() + " und " +  zweitesDatum.isoformat()
 else:
-    print "Zwischen " + erstesDatum.isoformat() + " und " + zweitesDatum.isoformat() + "liegen folgende schwarze Freitage \n"
+    print "Zwischen " + erstesDatum.isoformat() + " und " + zweitesDatum.isoformat() + "liegen folgende schwarze Freitage "
     print freitag(erstesDatum , zweitesDatum)

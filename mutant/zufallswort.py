@@ -36,6 +36,7 @@ def zufallswoerter(anz,maxL,abc):
 if __name__ == "__main__":
     anzahl=15
     maximalL=10
-    alphabet="abcdefghijklmnopqrstuvwxyz"
+    alphabet="0"
+    #"abcdefghijklmnopqrstuvwxyz"
 
     print zufallswoerter(anzahl,maximalL,alphabet)

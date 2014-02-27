@@ -15,25 +15,13 @@ separate Module:
 
 import random as r
 
-def zufallswort(maxL,abc):
-    L=r.randint(1,maxL)
-    temp=""
-    for index in range(L):
-        temp=temp + str(abc[r.randint(0,len(abc)-1)])
-    return temp
-
-def zufallswoerter(anz,maxL,abc):
-    temp=[]
-    for i in range(anz):
-        temp.append(zufallswort(maxL,abc))
-    return temp
-
+from zufallswort import *
 
 
 
 if __name__ == "__main__":
     anzahl=10
-    maximalL=1
+    maximalL=6
     alphabet="abcdefghijklmnopqrstuvwxyz"
 
     print zufallswoerter(anzahl,maximalL,alphabet)

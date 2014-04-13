@@ -10,6 +10,7 @@ http://www.programmieraufgaben.ch/aufgabe/mutanten/nwh8mrey
 
 separate Module:
     zufallswort.py
+    selektion.py
 
 """
 

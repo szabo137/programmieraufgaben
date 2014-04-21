@@ -3,7 +3,7 @@
 selektion.py
 *******************
 
-Fuehrt Selektionsprozess an gegebenen Worten aus. Dabei sollen verschiedene 
+Fuehrt Selektionsprozess an gegebenen Worten aus. Dabei sollen verschiedene
 Gueten geprueft werden:
 
     Laenge des Strings
@@ -38,7 +38,7 @@ def pruefAnz(bstbe,wort):
     """
     Prueft wie oft I:bstbe in I:wort enthalten ist
     und gibt die Anzahl zurueck.
-    
+
     TODO:
     Vll mit string.count() verbessern!!
     mglw. unter verwendung von string.remove()
@@ -48,10 +48,10 @@ def pruefAnz(bstbe,wort):
         if bstbe == el:
             temp+=1
     return temp
-    
+
 def gueteKorr(testwort,zielwort,gewicht=1.0):
     """
-    Gibt die Guete der korrekten Buchstaben mit einer 
+    Gibt die Guete der korrekten Buchstaben mit einer
     Wichtung von I:gewicht zurueck.
     """
     # gewicht=5 ist ein guter wert
@@ -73,7 +73,7 @@ def gueteKorr(testwort,zielwort,gewicht=1.0):
 
 def guetePos(testwort, zielwort, gewicht=1):
     """
-    Gibt die Guete der korrekten Position von Buchstaben mit einer 
+    Gibt die Guete der korrekten Position von Buchstaben mit einer
     Wichtung von I:gewicht zurueck.
     """
     Gpos=0.0
@@ -84,7 +84,7 @@ def guetePos(testwort, zielwort, gewicht=1):
     for i in range(len(temp)):
         if zielwort[i] == testwort[i]:
             Gpos+=1/float(len(zielwort))/float(gewicht)
-    return Gpos 
+    return Gpos
 
 
 # Selektion der Wortliste
@@ -97,20 +97,20 @@ def selektion(testliste, zielwort,gewicht=[1.0, 1.0, 1.0]):
         Position
     durch und gibt die besten 50 Prozent wider.
     """
-    
+
     #Fuellen eines dicts mit (wort:bewertung)
     bewertung={}
     for wort in testliste:
         bewertung[wort]=gueteLaenge(wort, zielwort, gewicht[0]) + gueteKorr(wort, zielwort, gewicht[1])+ guetePos(wort, zielwort, gewicht[2])
-    
 
-    
+
+
     #sortieren des dicts nach den Bewertungen
     bestenliste=[]
     temp=sorted(bewertung.items(), key=lambda item:item[1], reverse=True)
     for el in temp:
         bestenliste.append(el[0])
-        
+
     #Ausgabe der besten 50 Prozent (aufgerundet)
     return bestenliste[:int(len(bestenliste)/2.0 + 0.5)]
 

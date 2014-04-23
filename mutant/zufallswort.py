@@ -11,17 +11,17 @@ Hauptmodul: mutant.py
 
 """
 
-import random as r
+from random import randint as rrandint
 
 def zufallswort(maxL,abc):
     """
     gibt ein Zufallswort der maximalen Laenge I:maxL
     aus dem Alphabet I:abc zurueck.
     """
-    L=r.randint(1,maxL)
+    L=rrandint(1,maxL)
     temp=""
     for index in range(L):
-        temp=temp + str(abc[r.randint(0,len(abc)-1)])
+        temp=temp + str(abc[rrandint(0,len(abc)-1)])
     return temp
 
 def zufallswoerter(anz,maxL,abc):

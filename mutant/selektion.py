@@ -97,13 +97,10 @@ def selektion(testliste, zielwort,gewicht=[1.0, 1.0, 1.0]):
         Position
     durch und gibt die besten 50 Prozent wider.
     """
-
     #Fuellen eines dicts mit (wort:bewertung)
     bewertung={}
     for wort in testliste:
         bewertung[wort]=gueteLaenge(wort, zielwort, gewicht[0]) + gueteKorr(wort, zielwort, gewicht[1])+ guetePos(wort, zielwort, gewicht[2])
-
-
 
     #sortieren des dicts nach den Bewertungen
     bestenliste=[]

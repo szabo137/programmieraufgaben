@@ -11,7 +11,8 @@ Hauptmodul: mutant.py
 
 """
 
-import random as r
+from random import randint as rrandint
+from random import sample as rsample
 
 def mutWort(wort,abc):
     """
@@ -21,13 +22,13 @@ def mutWort(wort,abc):
         Hinzufuegen eines bel. Buchstabens aus I:abc
         Austauschen eines bel. Buchstabens durch einen aus I:abc
     """
-    
+
     #Auswahl der Mutationsmethode
-    meth=r.randint(1,3)
+    meth=rrandint(1,3)
     #Auswahl der Position
-    pos=r.randint(0,len(wort)-1)
+    pos=rrandint(0,len(wort)-1)
     #Auswahl des zufaelligen Buchstabens
-    zufBstbe=abc[r.randint(0,len(abc)-1)]
+    zufBstbe=abc[rrandint(0,len(abc)-1)]
     if meth==0:
         #Einfuegen
         temp=wort.replace(wort[pos],wort[pos] + zufBstbe )
@@ -40,12 +41,16 @@ def mutWort(wort,abc):
     else:
         #Austauschen
         temp=wort.replace(wort[pos],zufBstbe)
-    
+
     return temp
 
 
 def mutation(Gen,abc,anteil=0.3):
-    auswahl=r.sample(range(len(Gen)),int(len(Gen)*anteil+1))
+    """
+    Fuehrt eine Mutation der Individuen der Generation I:Gen aus dem Alphabet
+    I:abc mit einer Wahrscheinlichkeit von I:anteil durch
+    """
+    auswahl=rsample(range(len(Gen)),int(len(Gen)*anteil))
     for el in auswahl:
         Gen[el]=mutWort(Gen[el],abc)
     return Gen

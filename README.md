@@ -26,10 +26,26 @@ Ziel der Loesungen ist es, durch ausfuehrlicheres Ausarbeiten den persoenlichen
     Es soll die Summe von Quadraten, das Quadrat der Summe und deren Differenz
     zurückgegeben werden.
 
-4. Evolution von Worten: mutant/mutant.py
+4. kleinste Teilbare: kleinsteTeilbare.py
+
+    Die kleinste Zahl wird berechnet, welche durch alle Zahlen bis zu
+    einer angegebenen Grenze teilbar ist.
+
+    http://www.programmieraufgaben.ch/aufgabe/kleinste-durch-zahlenreihe-von-1-bis-10-teilbare-zahl/047jo2x5
+
+
+
+5. Evolution von Worten: mutant/mutant.py
 
     Es soll das Wort "Mutant" aus einer Anzahl von Zufallsworten durch
     einen Evolutionsprozess gefunden werden. Dabei spielen vor allem
     Selektion und Mutation, sowie Crossover eine entscheidende Rolle.
 
     http://www.programmieraufgaben.ch/aufgabe/mutanten/nwh8mrey
+
+6. Morsecode: morse.py
+
+    Es soll ein beliebiger Text ins Morse-Alphabet übersetzt werden.
+    Zusatz: Rueckübersetzung    
+
+    http://www.programmieraufgaben.ch/aufgabe/morse-code/0bgwabqq

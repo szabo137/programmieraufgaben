@@ -33,8 +33,6 @@ Ziel der Loesungen ist es, durch ausfuehrlicheres Ausarbeiten den persoenlichen
 
     http://www.programmieraufgaben.ch/aufgabe/kleinste-durch-zahlenreihe-von-1-bis-10-teilbare-zahl/047jo2x5
 
-
-
 5. Evolution von Worten: mutant/mutant.py
 
     Es soll das Wort "Mutant" aus einer Anzahl von Zufallsworten durch
@@ -46,6 +44,6 @@ Ziel der Loesungen ist es, durch ausfuehrlicheres Ausarbeiten den persoenlichen
 6. Morsecode: morse.py
 
     Es soll ein beliebiger Text ins Morse-Alphabet übersetzt werden.
-    Zusatz: Rueckübersetzung    
+    Zusatz: Rueckübersetzung
 
     http://www.programmieraufgaben.ch/aufgabe/morse-code/0bgwabqq
